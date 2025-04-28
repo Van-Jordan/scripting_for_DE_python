@@ -17,7 +17,7 @@ def main(path_to_search='.'):
     elif metric == 'tb':
         divisor = 1000000000000
     else:
-        print("Invalid metric. Please choose b, kb, mb, gb, or tb.")
+        print("{metric} is an invalid metric. Please choose b, kb, mb, gb, or tb.")
         return
 
     if min_file_size:

@@ -25,15 +25,7 @@ def main(path_to_search='.'):
             for _file in files:
                 full_path = os.path.join(root, _file)
                 size = os.path.getsize(full_path)
-                if metric == 'b':
-                    size = size / divisor
-                elif metric == 'kb':
-                    size = size / divisor
-                elif metric == 'mb':
-                    size = size / divisor
-                elif metric == 'gb':
-                    size = size / divisor
-                elif metric == 'tb':
+                if metric in ['b', 'kb', 'mb', 'gb', 'tb']:
                     size = size / divisor
                 else:
                     print(
